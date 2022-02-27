@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ChefController">
+    <children>
+        <ImageView fx:id="imageView_chef" fitHeight="768.0" fitWidth="1366.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../b1.jpg" />
+            </image>
+        </ImageView>
+        <Label alignment="CENTER" prefHeight="100.0" prefWidth="1366.0" style="-fx-background-color:  #67809f;" text="ERESTO MANAGMENT SYSTEM" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="325.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="5.0">
+            <image>
+                <Image url="@../logo.png" />
+            </image>
+        </ImageView>
+        <Circle fx:id="closeCircle_chef" fill="RED" onMouseClicked="#closeCircleClicked" radius="10.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="40.0" />
+      <Label alignment="CENTER" prefHeight="100.0" prefWidth="1366.0" text="BACK OFFICE MANAGMENT" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Line endX="866.0" startX="500.0" strokeWidth="2.0" AnchorPane.topAnchor="205.0" />
+      <TableView fx:id="orderTable" prefHeight="350.0" prefWidth="1366.0" AnchorPane.topAnchor="300.0">
+        <columns>
+          <TableColumn fx:id="orderTableRefCol" prefWidth="683.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="ORDER REFERENCE NO" />
+          <TableColumn fx:id="orderTableStatusCol" onEditCommit="#onStatusChanged" prefWidth="683.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="ORDER STATUS" />
+        </columns>
+      </TableView>
+      <Button fx:id="saveBtn_chef" mnemonicParsing="false" onMouseClicked="#chefBtnClicked" prefWidth="100.0" style="-fx-background-color: #436cb1;" text="Save" textFill="WHITE" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="50.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

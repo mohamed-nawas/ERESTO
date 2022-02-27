@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MenuController">
+    <children>
+        <ImageView fx:id="imageView_menu" fitHeight="768.0" fitWidth="1366.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../b1.jpg" />
+            </image>
+        </ImageView>
+        <Label alignment="CENTER" prefHeight="100.0" prefWidth="1366.0" style="-fx-background-color: #67809f;" text="ERESTO MANAGMENT SYSTEM" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="325.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="5.0">
+            <image>
+                <Image url="@../logo.png" />
+            </image>
+        </ImageView>
+        <Circle fx:id="closeCircle_menu" fill="RED" onMouseClicked="#closeCircleClicked" radius="10.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="40.0" />
+      <AnchorPane prefHeight="668.0" prefWidth="368.0" style="-fx-background-color: #436cb1;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="100.0" prefWidth="368.0" text="Menu" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="284.0" startX="84.0" stroke="WHITE" strokeWidth="2.0" AnchorPane.topAnchor="105.0" />
+            <Button fx:id="drinksBtn_menu" mnemonicParsing="false" onMouseClicked="#menuBtnClicked" prefHeight="100.0" prefWidth="368.0" style="-fx-background-color: #436cb1;" text="Drink" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="200.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="desertsBtn_menu" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#menuBtnClicked" prefHeight="100.0" prefWidth="368.0" style="-fx-background-color: #436cb1;" text="Desert" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="300.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="riceBtn_menu" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#menuBtnClicked" prefHeight="100.0" prefWidth="368.0" style="-fx-background-color: #436cb1;" text="Rice" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="400.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="noodlesBtn_menu" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#menuBtnClicked" prefHeight="100.0" prefWidth="368.0" style="-fx-background-color: #436cb1;" text="Noodle" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="500.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="100.0" prefWidth="998.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label text="Items In the List" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="itemsInTheListLabel_menu" text="00" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="addToOrderBtn_menu" mnemonicParsing="false" onMouseClicked="#menuBtnClicked" style="-fx-background-color: #436cb1;" text="Add to Order" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="50.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelOrderBtn_menu" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#menuBtnClicked" style="-fx-background-color: #436cb1;" text="Cancel" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="196.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="568.0" prefWidth="998.0" style="-fx-border-color: #95a5a6;" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Pane fx:id="noodlesPane" prefHeight="568.0" prefWidth="998.0">
+               <children>
+                  <AnchorPane prefHeight="568.0" prefWidth="998.0">
+                     <children>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="25.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Nutty%20Chiken%20noodles1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="349.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Fried%20prawn%20noodles1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="673.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Vegetable%20noodles1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="25.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Stire-fry%20noodles1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="349.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Spicy%20vegy%20noodles1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="673.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Sausage%20noodles1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="224.0" prefHeight="30.0" prefWidth="210.0" text="NUTTY CHICKEN NOODLES">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="224.0" prefHeight="30.0" prefWidth="210.0" text="FRIED PRAWN NOODLES">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="673.0" layoutY="224.0" prefHeight="30.0" prefWidth="210.0" text="VEGETABLE NOODLES">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="508.0" prefHeight="30.0" prefWidth="210.0" text="STIRE-FRY NOODLES">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="508.0" prefHeight="30.0" prefWidth="210.0" text="SPICY VEGI NOODLES">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="673.0" layoutY="508.0" prefHeight="30.0" prefWidth="210.0" text="SAUSAGE NOODLES">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="254.0" prefHeight="30.0" prefWidth="210.0" text="\$ 45">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="254.0" prefHeight="30.0" prefWidth="210.0" text="\$ 45">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="673.0" layoutY="254.0" prefHeight="30.0" prefWidth="210.0" text="\$ 45">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="538.0" prefHeight="30.0" prefWidth="210.0" text="\$ 45">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="538.0" prefHeight="30.0" prefWidth="210.0" text="\$ 45">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="673.0" layoutY="538.0" prefHeight="30.0" prefWidth="210.0" text="\$ 45">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="Pane4Item1Plus" layoutX="235.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane4ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane4Item1Minus" layoutX="282.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane4ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane4Item2Plus" layoutX="559.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane4ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane4Item2Minus" layoutX="606.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane4ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane4Item3Plus" layoutX="883.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane4ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane4Item3Minus" layoutX="930.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane4ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane4Item4Plus" layoutX="235.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane4ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane4Item4Minus" layoutX="282.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane4ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane4Item5Plus" layoutX="559.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane4ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane4Item5Minus" layoutX="606.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane4ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane4Item6Plus" layoutX="883.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane4ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane4Item6Minus" layoutX="930.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane4ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane fx:id="ricePane" prefHeight="568.0" prefWidth="998.0">
+               <children>
+                  <AnchorPane prefHeight="568.0" prefWidth="998.0">
+                     <children>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="25.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Chicken%20Fried%20rice1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="349.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Seafood%20fried%20rice1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="673.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Biriyani1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="25.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Nasi%20goreng1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="349.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Mixed%20fried%20rice1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="673.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Egg%20fried%20rice1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="224.0" prefHeight="30.0" prefWidth="210.0" text="CHICKEN FRIED RICE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="224.0" prefHeight="30.0" prefWidth="210.0" text="SEAFOOD FRIED RICE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="673.0" layoutY="224.0" prefHeight="30.0" prefWidth="210.0" text="BIRIYANI">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="508.0" prefHeight="30.0" prefWidth="210.0" text="NASI GORENG">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="508.0" prefHeight="30.0" prefWidth="210.0" text="MIXED FRIED RICE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="673.0" layoutY="508.0" prefHeight="30.0" prefWidth="210.0" text="EGG FRIED RICE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="254.0" prefHeight="30.0" prefWidth="210.0" text="\$ 35">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="254.0" prefHeight="30.0" prefWidth="210.0" text="\$ 35">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="673.0" layoutY="254.0" prefHeight="30.0" prefWidth="210.0" text="\$ 35">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="538.0" prefHeight="30.0" prefWidth="210.0" text="\$ 35">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="538.0" prefHeight="30.0" prefWidth="210.0" text="\$ 35">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="673.0" layoutY="538.0" prefHeight="30.0" prefWidth="210.0" text="\$ 35">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="Pane3Item1Plus" layoutX="235.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane3ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane3Item1Minus" layoutX="282.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane3ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane3Item2Plus" layoutX="559.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane3ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane3Item2Minus" layoutX="606.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane3ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane3Item3Plus" layoutX="883.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane3ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane3Item3Minus" layoutX="930.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane3ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane3Item4Plus" layoutX="235.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane3ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane3Item4Minus" layoutX="282.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane3ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane3Item5Plus" layoutX="559.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane3ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane3Item5Minus" layoutX="606.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane3ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane3Item6Plus" layoutX="883.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane3ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane3Item6Minus" layoutX="930.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane3ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane fx:id="desertsPane" prefHeight="568.0" prefWidth="998.0">
+               <children>
+                  <AnchorPane prefHeight="568.0" prefWidth="998.0">
+                     <children>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="25.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Caramel%20pudding1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="349.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Watalappan1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="673.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Fruit%20Salad1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="25.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Fruit%20Platter1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="349.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Ice-cream1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="673.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Lava%20cake1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="224.0" prefHeight="30.0" prefWidth="210.0" text="CARAMEL PUDDING">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="224.0" prefHeight="30.0" prefWidth="210.0" text="WATALAPPAN">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="673.0" layoutY="224.0" prefHeight="30.0" prefWidth="210.0" text="FRUIT SALAD">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="508.0" prefHeight="30.0" prefWidth="210.0" text="FRUIT PLATTER">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="508.0" prefHeight="30.0" prefWidth="210.0" text="ICE CREAM">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="673.0" layoutY="508.0" prefHeight="30.0" prefWidth="210.0" text="LAVA CAKE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="254.0" prefHeight="30.0" prefWidth="210.0" text="\$ 25">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="254.0" prefHeight="30.0" prefWidth="210.0" text="\$ 25">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="673.0" layoutY="254.0" prefHeight="30.0" prefWidth="210.0" text="\$ 25">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="538.0" prefHeight="30.0" prefWidth="210.0" text="\$ 25">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="538.0" prefHeight="30.0" prefWidth="210.0" text="\$ 25">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="673.0" layoutY="538.0" prefHeight="30.0" prefWidth="210.0" text="\$ 25">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="Pane2Item1Plus" layoutX="235.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane2ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane2Item1Minus" layoutX="282.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane2ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane2Item2Plus" layoutX="559.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane2ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane2Item2Minus" layoutX="606.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane2ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane2Item3Plus" layoutX="883.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane2ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane2Item3Minus" layoutX="930.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane2ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane2Item4Plus" layoutX="235.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane2ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane2Item4Minus" layoutX="282.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane2ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane2Item5Plus" layoutX="559.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane2ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane2Item5Minus" layoutX="606.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane2ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane2Item6Plus" layoutX="883.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane2ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane2Item6Minus" layoutX="930.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane2ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane fx:id="drinksPane" prefHeight="568.0" prefWidth="998.0">
+               <children>
+                  <AnchorPane prefHeight="568.0" prefWidth="998.0">
+                     <children>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="25.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Chocolate%20drink1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="349.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Mango%20cocktail1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="673.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Nutella1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="25.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Orange%20juice1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="349.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Oreo%20Milkshake1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="180.0" fitWidth="300.0" layoutX="673.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Vanilla%20strawberry%20milkshake1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="224.0" prefHeight="30.0" prefWidth="210.0" text="CHOCOLATE DRINK">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="224.0" prefHeight="30.0" prefWidth="210.0" text="MANGO COCKTAIL">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="673.0" layoutY="224.0" prefHeight="30.0" prefWidth="210.0" text="NUTELLA">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="508.0" prefHeight="30.0" prefWidth="210.0" text="ORANGE JUICE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="508.0" prefHeight="30.0" prefWidth="210.0" text="OREO MILKSHAKE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="673.0" layoutY="508.0" prefHeight="30.0" prefWidth="210.0" text="STRAWBERRY MILKSHAKE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="254.0" prefHeight="30.0" prefWidth="210.0" text="\$ 15">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="254.0" prefHeight="30.0" prefWidth="210.0" text="\$ 15">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="673.0" layoutY="254.0" prefHeight="30.0" prefWidth="210.0" text="\$ 15">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="538.0" prefHeight="30.0" prefWidth="210.0" text="\$ 15">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="349.0" layoutY="538.0" prefHeight="30.0" prefWidth="210.0" text="\$ 15">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="673.0" layoutY="538.0" prefHeight="30.0" prefWidth="210.0" text="\$ 15">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="Pane1Item1Plus" layoutX="235.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane1ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane1Item1Minus" layoutX="282.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane1ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane1Item2Plus" layoutX="559.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane1ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane1Item2Minus" layoutX="606.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane1ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane1Item3Plus" layoutX="883.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane1ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane1Item3Minus" layoutX="930.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#pane1ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane1Item4Plus" layoutX="235.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane1ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane1Item4Minus" layoutX="282.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane1ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane1Item5Plus" layoutX="559.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane1ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane1Item5Minus" layoutX="606.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane1ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane1Item6Plus" layoutX="883.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane1ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Pane1Item6Minus" layoutX="930.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#pane1ItemClicked" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #436cb1;" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+         </children></AnchorPane>
+    </children>
+</AnchorPane>

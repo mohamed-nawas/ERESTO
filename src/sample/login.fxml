@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fx:id="imageView_login" fitHeight="768.0" fitWidth="1366.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../b1.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" prefHeight="100.0" prefWidth="1366.0" style="-fx-background-color: #67809f;" text="ERESTO MANAGMENT SYSTEM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="325.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@../logo.png" />
+         </image>
+      </ImageView>
+      <Circle fx:id="closeCircle_login" fill="RED" onMouseClicked="#closeCircleClicked" radius="10.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="40.0" />
+      <AnchorPane opacity="0.85" prefHeight="300.0" prefWidth="700.0" style="-fx-background-color: #f3f1ef; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #95a5a6; -fx-border-width: 2;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="333.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="75.0" prefWidth="700.0" text="Sign In">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label text="Username" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="105.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" text="Password" AnchorPane.bottomAnchor="105.0" AnchorPane.leftAnchor="50.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userField_login" promptText="enter username" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="105.0" />
+            <PasswordField fx:id="passwordField_login" promptText="enter password" AnchorPane.bottomAnchor="105.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="100.0" />
+            <Button fx:id="signBtn_login" mnemonicParsing="false" onMouseClicked="#loginBtnClicked" style="-fx-background-color: #436cb1;" text="Sign In" textFill="WHITE" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="300.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="registerBtn_login" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#loginBtnClicked" style="-fx-background-color: #436cb1;" text="Register" textFill="WHITE" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="100.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

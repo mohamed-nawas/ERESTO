@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <ImageView fx:id="imageView_empRegister" fitHeight="768.0" fitWidth="1366.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../b1.jpg" />
+            </image>
+        </ImageView>
+        <Label alignment="CENTER" prefHeight="100.0" prefWidth="1366.0" style="-fx-background-color:  #67809f;" text="ERESTO MANAGMENT SYSTEM" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="325.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="5.0">
+            <image>
+                <Image url="@../logo.png" />
+            </image>
+        </ImageView>
+        <Circle fx:id="closeCircle_empRegister" fill="RED" onMouseClicked="#closeCircleClicked" radius="10.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="40.0" />
+      <AnchorPane opacity="0.85" prefHeight="300.0" prefWidth="700.0" style="-fx-background-color: #f3f1ef; -fx-border-color: #95a5a6; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-width: 2;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="333.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="75.0" prefWidth="700.0" text="Employee Register">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label text="Name" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="80.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" text="Username" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="140.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="20.0" text="Password" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="200.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameField_empRegister" promptText="name" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="80.0" />
+            <TextField fx:id="userField_empRegister" layoutX="10.0" layoutY="10.0" promptText="username" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="140.0" />
+            <PasswordField fx:id="passwordField_empRegister" promptText="password" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="200.0" />
+            <Button fx:id="registerBtn_empRegister" mnemonicParsing="false" onMouseClicked="#empRegisterBtnClicked" style="-fx-background-color: #436cb1;" text="Register" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="300.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="signBtn_empRegister" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#empRegisterBtnClicked" style="-fx-background-color: #436cb1;" text="Log In" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="100.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

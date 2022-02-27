@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fx:id="imageView_sample" fitHeight="768.0" fitWidth="1366.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../b1.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" prefHeight="100.0" prefWidth="1366.0" style="-fx-background-color: #67809f;" text="ERESTO MANAGMENT SYSTEM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="325.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../logo.png" />
+         </image>
+      </ImageView>
+      <Circle fx:id="closeCircle_sample" fill="RED" onMouseClicked="#closeCircleClicked" radius="10.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="40.0" />
+      <AnchorPane opacity="0.85" prefHeight="300.0" prefWidth="700.0" style="-fx-background-color: #f3f1ef; -fx-background-radius: 15; -fx-border-color: #95a5a6; -fx-border-radius: 15; -fx-border-width: 2;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="333.0">
+         <children>
+            <Label text="CUSTOMER" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="85.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" text="STAFF" AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="50.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="dineInBtn_sample" layoutX="274.0" layoutY="87.0" mnemonicParsing="false" onMouseClicked="#sampleBtnClicked" style="-fx-background-color: #436cb1;" text="Dine In" textFill="WHITE" AnchorPane.leftAnchor="274.0" AnchorPane.topAnchor="87.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="takeAwayBtn_sample" layoutX="474.0" layoutY="87.0" mnemonicParsing="false" onMouseClicked="#sampleBtnClicked" style="-fx-background-color: #436cb1;" text="Take Away" textFill="WHITE" AnchorPane.leftAnchor="474.0" AnchorPane.topAnchor="87.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="managerBtn_sample" layoutX="274.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#sampleBtnClicked" style="-fx-background-color: #436cb1;" text="Manager" textFill="WHITE" AnchorPane.bottomAnchor="87.0" AnchorPane.leftAnchor="274.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="backOfficeBtn_sample" layoutX="474.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#sampleBtnClicked" style="-fx-background-color: #436cb1;" text="Back Office" textFill="WHITE" AnchorPane.bottomAnchor="87.0" AnchorPane.leftAnchor="474.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ManagerController">
+    <children>
+        <Label alignment="CENTER" prefHeight="100.0" prefWidth="1366.0" style="-fx-background-color:  #67809f;" text="ERESTO MANAGMENT SYSTEM" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="325.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="5.0">
+            <image>
+                <Image url="@../logo.png" />
+            </image>
+        </ImageView>
+        <Circle fx:id="closeCircle_manager" fill="RED" onMouseClicked="#closeCircleClicked" radius="10.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="40.0" />
+      <AnchorPane prefHeight="668.0" prefWidth="368.0" style="-fx-background-color: #436cb1;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="100.0" prefWidth="368.0" text="Manager" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="284.0" startX="84.0" stroke="WHITE" strokeWidth="2.0" AnchorPane.topAnchor="105.0" />
+            <Button fx:id="empBtn_manager" mnemonicParsing="false" onAction="#managerBtnClicked" prefHeight="100.0" prefWidth="368.0" style="-fx-background-color: #436cb1;" text="Add/ Update Employee" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="200.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="compOrdersBtn_manager" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#managerBtnClicked" prefHeight="100.0" prefWidth="368.0" style="-fx-background-color: #436cb1;" text="Completed Orders" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="300.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="reportBtn_manager" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#managerBtnClicked" prefHeight="100.0" prefWidth="368.0" style="-fx-background-color: #436cb1;" text="Reports" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="400.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="668.0" prefWidth="998.0" AnchorPane.leftAnchor="368.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Pane fx:id="Pane3" prefHeight="668.0" prefWidth="998.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fx:id="imageView_manager3" fitHeight="668.0" fitWidth="998.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../b11.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="Pane2" layoutX="10.0" layoutY="10.0" prefHeight="668.0" prefWidth="998.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fx:id="imageView_manager2" fitHeight="668.0" fitWidth="998.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../b11.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="100.0" prefWidth="998.0" text="COMPLETED ORDERS">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Line endX="699.0" layoutY="105.0" startX="299.0" strokeWidth="2.0" />
+                  <TableView fx:id="completedOrdersTable" layoutY="200.0" prefHeight="300.0" prefWidth="998.0">
+                    <columns>
+                      <TableColumn fx:id="compOrdersTableRefCol" prefWidth="499.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="ORDER REFERENCE NO" />
+                      <TableColumn fx:id="compOrdersTableEmpCol" onEditCommit="#onEmpChanged" prefWidth="499.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="EMPLOYEE" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="compOrdersSaveBtn_manager" layoutX="850.0" layoutY="540.0" mnemonicParsing="false" onAction="#managerBtnClicked" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #436cb1;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="Pane1" layoutX="10.0" layoutY="10.0" prefHeight="668.0" prefWidth="998.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fx:id="imageView_manager1" fitHeight="668.0" fitWidth="998.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../b11.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="100.0" prefWidth="998.0" text="MODIFY EMPLOYEE INFORMATION">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Line endX="698.0" layoutY="105.0" startX="300.0" strokeWidth="2.0" />
+                  <TableView fx:id="employeeTable" layoutY="200.0" prefHeight="300.0" prefWidth="998.0">
+                    <columns>
+                      <TableColumn fx:id="empTableNameCol" prefWidth="333.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="NAME" />
+                      <TableColumn fx:id="empTableUsernameCol" onEditCommit="#onEditColUsername" prefWidth="333.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="USERNAME" />
+                        <TableColumn fx:id="empTablePasswordCol" onEditCommit="#onEditColPassword" prefWidth="332.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="PASSWORD" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="empSaveBtn_manager" layoutX="850.0" layoutY="540.0" mnemonicParsing="false" onAction="#managerBtnClicked" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #436cb1;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="empEditBtn_manager" layoutX="700.0" layoutY="540.0" mnemonicParsing="false" onAction="#managerBtnClicked" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #436cb1;" text="Edit" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="empAddBtn_manager" layoutX="700.0" layoutY="590.0" mnemonicParsing="false" onAction="#managerBtnClicked" prefHeight="30.0" prefWidth="260.0" style="-fx-background-color: #436cb1;" text="Add" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
